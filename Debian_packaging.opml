@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0"><head>
+<title>Debian packaging</title>
+</head><body>
+	<outline text="Process">
+		<outline text="WNPP" _note="https://www.debian.org/devel/wnpp/" />
+	</outline>
+	<outline text="Tools">
+		<outline text="Package management tools">
+			<outline text="dpkg-deb" _note="dpkg-deb is a package manipulation program that allows the user to, among other things, list the contents of a package, extract the files to a particular directory or extract the control information." />
+			<outline text="Others">
+				<outline text="Tasksel" _note="A task is a collection of several individual Debian packages all related to a specific activity. Tasks can be installed through the tasksel program or through aptitude.&#xA;&#xA;Typically, the Debian installer will automatically install the task associated with a standard system and a desktop environment. Also, depending on your selections throughout the installation process, tasks might be automatically installed in your system. For example, if you selected a language other than English, the task associated with it will be installed automatically too and if the installer recognises you are installing on a laptop system the laptop task will also be installed." />
+				<outline text="Synaptic" _note="synaptic is a graphical package manager. Along with most of the features offered by aptitude, it also has a feature for editing the list of used repositories, and supports browsing all available documentation related to a package.&#xA;&#xA;http://www.nongnu.org/synaptic/" />
+				<outline text="Aptitude" _note="aptitude is a package manager for Debian GNU/Linux systems that provides a frontend to the apt package management infrastructure. aptitude is a text-based interface using the curses library. Actions may be performed from a visual interface or from the command-line.&#xA;&#xA;aptitude provides the functionality of apt-get, as well as many additional features.&#xA;" />
+			</outline>
+			<outline text="apt" _note="APT is the Advanced Package Tool, an advanced interface to the Debian packaging system which provides the apt-get and apt programs. It provides commandline tools for searching and managing packages, and for querying information about them, as well as low-level access to all features of the libapt-pkg library.&#xA;&#xA;FAQ: https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html#s-apt&#xA;&#xA;man: https://manpages.debian.org/stretch/apt/apt.8.en.html" />
+			<outline text="dpkg" _note="Main package management program. All other package management tools depend on dpkg.&#xA;&#xA;FAQ: https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html#s-dpkg&#xA;&#xA;man: https://manpages.debian.org/stretch/dpkg/dpkg.1.en.html" />
+		</outline>
+		<outline text="Alioth" />
+		<outline text="Mailing lists" />
+		<outline text="Bugtracker" />
+	</outline>
+	<outline text="Documentation">
+		<outline text="Debian reference" _note="https://www.debian.org/doc/manuals/debian-reference/" />
+		<outline text="Tutorials">
+			<outline text="Quick guide" _note="https://anarc.at/software/debian-development/" />
+			<outline text="Introduction to debian packaging" _note="https://www.debian.org/doc/devel-manuals#packaging-tutorial" />
+		</outline>
+		<outline text="Wiki" />
+		<outline text="FAQ" _note="https://www.debian.org/doc/manuals/debian-faq/index.en.html#contents" />
+	</outline>
+	<outline text="Repos">
+		<outline text="FTP" _note="ftp.debian.org us where the packages or the distributions can be downloaded from.&#xA;&#xA;The following subdirectories can be found Theresa.">
+			<outline text="indices" _note="Various indices of the site (the Maintainers file and the override files)." />
+			<outline text="project" _note="Mostly developer-only materials and some miscellaneous files." />
+			<outline text="tools" _note="DOS utilities for creating boot disks, partitioning your disk drive, compressing/decompressing files, and booting Linux." />
+			<outline text="pool" _note="The pool directory contains the actual packages.&#xA;&#xA;The source code is distributed in the pool directory together with all the architecture-specific binary directories.&#xA;&#xA;Packages are structured in t&apos;he &quot;pool&quot; directory according to the name of the source package. To make this manageable, the pool is subdivided by section (`main&apos;, `contrib&apos; and `non-free&apos;) and by the first letter of the source package name. These directories contain several files: the binary packages for each architecture, and the source packages from which the binary packages were generated.">
+				<outline text="non-free" _note="Due to restrictions in their licenses, source code may or may not be available for packages in the &quot;contrib&quot; and &quot;non-free&quot; areas." />
+				<outline text="main" />
+				<outline text="contrib" _note="Due to restrictions in their licenses, source code may or may not be available for packages in the &quot;contrib&quot; and &quot;non-free&quot; areas." />
+			</outline>
+			<outline text="doc" _note="The basic Debian documentation, such as this FAQ, the bug reporting system instructions, etc." />
+			<outline text="dists" _note="The dists directory is short for &quot;distributions&quot;, and it is the canonical way to access the currently available Debian releases (and pre-releases).&#xA;&#xA;Inside, the &apos;stable&apos;, &apos;testing&apos; and &apos;unstable&apos; directories are symlinks to the corresponding codename.">
+				<outline text="stable">
+					<outline text="main">
+						<outline text="binary-*" _note="Subdirectories that contain index files for binary packages of each available computer architecture, for example binary-i386 for packages which execute on Intel x86 PC machines or binary-sparc for packages which execute on Sun SPARCStations.&#xA;&#xA;The index files in binary-* are called Packages(.gz, .bz2) and they include a summary of each binary package that is included in that distribution. The actual binary packages reside in the top level pool directory." />
+						<outline text="debian-installer" _note="Contains a set of subdirectories (binary-architecture) meant for the installation system index files." />
+						<outline text="source" _note="Contains index files for source packages included in the distribution. The index file is called Sources(.gz, .bz2)." />
+					</outline>
+				</outline>
+			</outline>
+		</outline>
+		<outline text="Backport" _note="Packages in testing and unstable adapted to work on stable." />
+		<outline text="Archive" _note="Archive is the repo where all previous stable distributions go when the new stable is released (also known as oldstables)." />
+	</outline>
+	<outline text="Policies and Licenses">
+		<outline text="Debian policy manual" _note="https://www.debian.org/doc/debian-policy/" />
+		<outline text="Licenses" _note="FS guidelines&#xA;GPL, BSD, Artistic,..." />
+		<outline text="Debian Free Software Guidelines" _note="https://www.debian.org/doc/debian-policy/ch-archive.html#s-dfsg" />
+	</outline>
+	<outline text="Distributions" _note="https://www.debian.org/doc/manuals/debian-faq/ch-ftparchives&#xA;&#xA;https://www.debian.org/releases/index.en.html">
+		<outline text="Oldstable" _note="Previous stable distributions." />
+		<outline text="Oldoldstable" />
+		<outline text="Experimental" _note="Experimental is used for packages which are still being developed, and with a high risk of breaking your system. It&apos;s used by developers who&apos;d like to study and test bleeding edge software. Users shouldn&apos;t be using packages from there, because they can be dangerous and harmful even for the most experienced people." />
+		<outline text="Unstable" _note="sid or unstable is the place where most of the packages are initially uploaded. It will never be released directly, because packages which are to be released will first have to be included in testing, in order to be released in stable later on. sid contains packages for both released and unreleased architectures.">
+			<outline text="contrib" _note="This directory contains packages which are DFSG-free andfreely distributable themselves, but somehow depend on a package that is notfreely distributable and thus available only in the non-free section." />
+			<outline text="main" _note="This directory contains the packages which formally constitute the most recent release of the Debian GNU/Linux system.&#xA;&#xA;These packages all comply with the Debian Free Software Guidelines, and are all freely usable and distributable." />
+			<outline text="non-free" _note="This directory contains packages distribution of which is restricted in a way that requires that distributors take careful account of the specified copyright requirements." />
+		</outline>
+		<outline text="Testing" _note="Packages are installed into the `testing&apos; directory after they have undergone some degree of testing in unstable.&#xA;&#xA;They must be in sync on all architectures where they have been built and mustn&apos;t have dependencies that make them uninstallable; they also need to have fewer release-critical bugs than the versions currently in unstable.&#xA;&#xA;More information about the status of &quot;testing&quot; in general and the individual packages is available at http://www.debian.org/devel/testing.&#xA;&#xA;">
+			<outline text="contrib" _note="This directory contains packages which are DFSG-free andfreely distributable themselves, but somehow depend on a package that is notfreely distributable and thus available only in the non-free section." />
+			<outline text="main" _note="This directory contains the packages which formally constitute the most recent release of the Debian GNU/Linux system.&#xA;&#xA;These packages all comply with the Debian Free Software Guidelines, and are all freely usable and distributable." />
+			<outline text="non-free" _note="This directory contains packages distribution of which is restricted in a way that requires that distributors take careful account of the specified copyright requirements." />
+		</outline>
+		<outline text="Stable" _note="Current stable production release.">
+			<outline text="contrib" _note="This directory contains packages which are DFSG-free andfreely distributable themselves, but somehow depend on a package that is notfreely distributable and thus available only in the non-free section." />
+			<outline text="non-free" _note="This directory contains packages distribution of which is restricted in a way that requires that distributors take careful account of the specified copyright requirements." />
+			<outline text="main" _note="This directory contains the packages which formally constitute the most recent release of the Debian GNU/Linux system.&#xA;&#xA;These packages all comply with the Debian Free Software Guidelines, and are all freely usable and distributable." />
+		</outline>
+	</outline>
+	<outline text="Packages">
+		<outline text="Priorities" _note="Each Debian package is assigned a priority by the distribution maintainers, as an aid to the package management system.&#xA;&#xA;https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-priority">
+			<outline text="Required" _note="Packages that are necessary for the proper functioning of the system.&#xA;&#xA;This includes all tools that are necessary to repair system defects. Should not be removed, as this can leave a system broken." />
+			<outline text="Important" _note="Packages that should be found on any Unix-like system.&#xA;&#xA;Other packages which the system will not run well or be usable without will be here. There are no large applications here, they only constitute the bare infrastructure.&#xA;&#xA;" />
+			<outline text="Standard" _note="Packages that are standard on any Linux system, including a reasonably small but not too limited character-mode system.&#xA;&#xA;This is what will be installed by default if users do not select anything else. Tools are included to be able to send e-mail, download files from FTP servers, a Python interpreter, some server software like OpenSSH and Exim and some common generic documentation.&#xA;&#xA;" />
+			<outline text="Optional" _note="Packages that you might reasonably want to install if you do not know what they are, or that do not have specialized requirements.&#xA;&#xA;This includes plots of applications.&#xA;&#xA;" />
+			<outline text="Extra" _note="Packages that either conflict with others with higher priorities, are only likely to be useful if you already know what they are, or have specialized requirements that make them unsuitable for &quot;Optional&quot;." />
+			<outline text="Essential" _note="Packages that are absolutely necessary for the proper functioning of the system. The package management tools will refuse to remove these." />
+		</outline>
+		<outline text="Status" _note="The package status seen with dpkg indicates what the user wants regarding the package.&#xA;&#xA;https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-pkgstatus">
+			<outline text="Remove" _note="The user wants the package removed, but does not want to remove any existing configuration file." />
+			<outline text="Hold" _note="The user wants this package not to be processed, i.e. wants to keep the current version with the current status whatever that is." />
+			<outline text="Purge" _note="The user wants the package to be removed completely, including its configuration files." />
+			<outline text="Install" _note="The user wants the package installed or upgraded." />
+			<outline text="Unknown" _note="The user has never indicated whether the package is wanted." />
+		</outline>
+		<outline text="Dependencies" _note="Dependencies are designed to indicate (in a single flag) the level at which Program A can operate independently of the existence of Program B on a given system.&#xA;&#xA;This information us declared in the package&apos;s control file.&#xA;&#xA;https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-depends">
+			<outline text="Suggests" _note="Package A suggests Package B if B contains files that are related to (and usually enhance) the functionality of A." />
+			<outline text="Replaces" _note="Package A replaces Package B when files installed by B are removed and (in some cases) over-written by files in A." />
+			<outline text="Pre-depends" _note="For some packages, dpkg will refuse even to unpack them until certain dependencies are resolved. Such packages are said to &quot;Pre-depend&quot; on the presence of some other packages." />
+			<outline text="Provides" _note="Package A provides Package B when all of the files and functionality of B are incorporated into A. This mechanism provides a way for users with constrained disk space to get only that part of package A which they really need." />
+			<outline text="Breaks" _note="Package A breaks Package B when both packages cannot be simultaneously configured in a system. The package management system will refuse to install one if the other one is already installed and configured in the system." />
+			<outline text="Conflicts" _note="Package A conflicts with Package B when A will not operate if B is installed on the system. Most often, conflicts are cases where A contains files which are an improvement over those in B. &quot;Conflicts&quot; are often combined with &quot;replaces&quot;." />
+			<outline text="Recommends" _note="Package A recommends Package B, if the package maintainer judges that most users would not want A without also having the functionality provided by B." />
+			<outline text="Depends" _note="Package A depends on Package B if B absolutely must be installed in order to run A. In some cases, A depends not only on B, but on a version of B. In this case, the version dependency is usually a lower limit, in the sense that A depends on any version of B more recent than some specified version." />
+		</outline>
+		<outline text="Installation">
+			<outline text="dpkg" />
+			<outline text="Pre/post scripts" _note="https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-maintscripts">
+				<outline text="postinst" _note="This script typically completes any required configuration of the package foo once foo has been unpacked from its Debian archive (&quot;.deb&quot;) file. Often, &apos;postinst&apos; scripts ask users for input, and/or warn them that if they accept default values, they should remember to go back and re-configure that package as needed. Many &apos;postinst&apos; scripts then execute any commands necessary to start or restart a service once a new package has been installed or upgraded." />
+				<outline text="postrm" _note="This script typically modifies links or other files associated with foo, and/or removes files created by the package. " />
+				<outline text="prerm" _note="This script typically stops any daemons which are associated with a package. It is executed before the removal of files associated with the package." />
+				<outline text="preinst" _note="This script is executed before the package it belongs to is unpacked from its Debian archive (&quot;.deb&quot;) file. Many &apos;preinst&apos; scripts stop services for packages which are being upgraded until their installation or upgrade is completed (following the successful execution of the &apos;postinst&apos; script)." />
+			</outline>
+		</outline>
+		<outline text="Structure">
+			<outline text="Binary">
+				<outline text="data.tar.gz" _note="data files of the package" />
+				<outline text="control.tar.gz" _note="metadata about the package&#xD;&#xA;control, md5sums, (pre|post)(rm|inst), triggers, shlibs, . . .&#xD;" />
+				<outline text="debian-binary" _note="version of the deb file format, &quot;2.0\n&quot;&#xD;" />
+			</outline>
+		</outline>
+		<outline text="Types" _note="There are two types of packages: binary and source.&#xA;&#xA;https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-package">
+			<outline text="Source" _note="Source packages contain the source code and consist of a .dsc file describing the source package (including the names of the following files), a.orig.tar.gz file that contains the original unmodified source in gzip-compressed tar format and usually a .diff.gz file that contains the Debian-specific changes to the original source. The utility dpkg-source packs and unpacks Debian source archives.&#xA;&#xA;https://www.debian.org/doc/debian-policy/ch-source.html">
+				<outline text="Build" _note="https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-sourcebuild" />
+				<outline text="Installation" _note="To unpack a source package it is first necessary to configure the &quot;deb-src&quot; lines in apt&apos;s sources.list config file.&#xA;&#xA;Afterwards it&apos;s just:&#xA;&#xA;apt-get source foo" />
+			</outline>
+			<outline text="Virtual" _note="A virtual package is a generic name that applies to any one of a group of packages, all of which provide similar basic functionality.&#xA;&#xA;Formatge example, exim4 and sendmail both provide the functionality of a mail transport agent. They are therefore said to provide the virtual package &quot;mail-transport-agent&quot;. If either one is installed, then any program depending on the installation of a mail-transport-agent will be satisfied by the presence of this virtual package.&#xA;&#xA;If more than one package which provide the same virtual package is installed on a system, then system administrators can set one as the preferred package with the update-alternatives command.&#xA;&#xA;https://www.debian.org/doc/manuals/debian-faq/ch-customizing.en.html#s-diverse&#xA;&#xA;https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-virtual" />
+			<outline text="Binary" _note="Binary packages contain executables, configuration files, man/info pages, copyright information, and other documentation. These packages are distributed in a Debian-specific archive format and they are usually characterized by having a &apos;.deb&apos; file extension. Binary packages can be unpacked using the Debian utility dpkg&#xA;&#xA;https://www.debian.org/doc/debian-policy/ch-binary.html" />
+		</outline>
+	</outline>
+</body></opml>

@@ -1,0 +1,499 @@
+Debian packaging
+	Process
+		WNPP
+			Note 1
+	Tools
+		Package management tools
+			dpkg-deb
+				Note 2
+			Others
+				Tasksel
+					Note 3
+				Synaptic
+					Note 4
+				Aptitude
+					Note 5
+			apt
+				Note 6
+			dpkg
+				Note 7
+		Alioth
+		Mailing lists
+		Bugtracker
+	Documentation
+		Debian reference
+			Note 8
+		Tutorials
+			Quick guide
+				Note 9
+			Introduction to debian packaging
+				Note 10
+		Wiki
+		FAQ
+			Note 11
+	Repos
+		FTP
+			Note 12
+			indices
+				Note 13
+			project
+				Note 14
+			tools
+				Note 15
+			pool
+				Note 16
+				non-free
+					Note 17
+				main
+				contrib
+					Note 18
+			doc
+				Note 19
+			dists
+				Note 20
+				stable
+					main
+						binary-*
+							Note 21
+						debian-installer
+							Note 22
+						source
+							Note 23
+		Backport
+			Note 24
+		Archive
+			Note 25
+	Policies and Licenses
+		Debian policy manual
+			Note 26
+		Licenses
+			Note 27
+		Debian Free Software Guidelines
+			Note 28
+	Distributions
+		Note 29
+		Oldstable
+			Note 30
+		Oldoldstable
+		Experimental
+			Note 31
+		Unstable
+			Note 32
+			contrib
+				Note 33
+			main
+				Note 34
+			non-free
+				Note 35
+		Testing
+			Note 36
+			contrib
+				Note 37
+			main
+				Note 38
+			non-free
+				Note 39
+		Stable
+			Note 40
+			contrib
+				Note 41
+			non-free
+				Note 42
+			main
+				Note 43
+	Packages
+		Priorities
+			Note 44
+			Required
+				Note 45
+			Important
+				Note 46
+			Standard
+				Note 47
+			Optional
+				Note 48
+			Extra
+				Note 49
+			Essential
+				Note 50
+		Status
+			Note 51
+			Remove
+				Note 52
+			Hold
+				Note 53
+			Purge
+				Note 54
+			Install
+				Note 55
+			Unknown
+				Note 56
+		Dependencies
+			Note 57
+			Suggests
+				Note 58
+			Replaces
+				Note 59
+			Pre-depends
+				Note 60
+			Provides
+				Note 61
+			Breaks
+				Note 62
+			Conflicts
+				Note 63
+			Recommends
+				Note 64
+			Depends
+				Note 65
+		Installation
+			dpkg
+			Pre/post scripts
+				Note 66
+				postinst
+					Note 67
+				postrm
+					Note 68
+				prerm
+					Note 69
+				preinst
+					Note 70
+		Structure
+			Binary
+				data.tar.gz
+					Note 71
+				control.tar.gz
+					Note 72
+				debian-binary
+					Note 73
+		Types
+			Note 74
+			Source
+				Note 75
+				Build
+					Note 76
+				Installation
+					Note 77
+			Virtual
+				Note 78
+			Binary
+				Note 79
+
+Note 1: WNPP
+
+https://www.debian.org/devel/wnpp/
+Note 2: dpkg-deb
+
+dpkg-deb is a package manipulation program that allows the user to, among other things, list the contents of a package, extract the files to a particular directory or extract the control information.
+Note 3: Tasksel
+
+A task is a collection of several individual Debian packages all related to a specific activity. Tasks can be installed through the tasksel program or through aptitude.
+
+Typically, the Debian installer will automatically install the task associated with a standard system and a desktop environment. Also, depending on your selections throughout the installation process, tasks might be automatically installed in your system. For example, if you selected a language other than English, the task associated with it will be installed automatically too and if the installer recognises you are installing on a laptop system the laptop task will also be installed.
+Note 4: Synaptic
+
+synaptic is a graphical package manager. Along with most of the features offered by aptitude, it also has a feature for editing the list of used repositories, and supports browsing all available documentation related to a package.
+
+http://www.nongnu.org/synaptic/
+Note 5: Aptitude
+
+aptitude is a package manager for Debian GNU/Linux systems that provides a frontend to the apt package management infrastructure. aptitude is a text-based interface using the curses library. Actions may be performed from a visual interface or from the command-line.
+
+aptitude provides the functionality of apt-get, as well as many additional features.
+
+Note 6: apt
+
+APT is the Advanced Package Tool, an advanced interface to the Debian packaging system which provides the apt-get and apt programs. It provides commandline tools for searching and managing packages, and for querying information about them, as well as low-level access to all features of the libapt-pkg library.
+
+FAQ: https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html#s-apt
+
+man: https://manpages.debian.org/stretch/apt/apt.8.en.html
+Note 7: dpkg
+
+Main package management program. All other package management tools depend on dpkg.
+
+FAQ: https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html#s-dpkg
+
+man: https://manpages.debian.org/stretch/dpkg/dpkg.1.en.html
+Note 8: Debian reference
+
+https://www.debian.org/doc/manuals/debian-reference/
+Note 9: Quick guide
+
+https://anarc.at/software/debian-development/
+Note 10: Introduction to debian packaging
+
+https://www.debian.org/doc/devel-manuals#packaging-tutorial
+Note 11: FAQ
+
+https://www.debian.org/doc/manuals/debian-faq/index.en.html#contents
+Note 12: FTP
+
+ftp.debian.org us where the packages or the distributions can be downloaded from.
+
+The following subdirectories can be found Theresa.
+Note 13: indices
+
+Various indices of the site (the Maintainers file and the override files).
+Note 14: project
+
+Mostly developer-only materials and some miscellaneous files.
+Note 15: tools
+
+DOS utilities for creating boot disks, partitioning your disk drive, compressing/decompressing files, and booting Linux.
+Note 16: pool
+
+The pool directory contains the actual packages.
+
+The source code is distributed in the pool directory together with all the architecture-specific binary directories.
+
+Packages are structured in t'he "pool" directory according to the name of the source package. To make this manageable, the pool is subdivided by section (`main', `contrib' and `non-free') and by the first letter of the source package name. These directories contain several files: the binary packages for each architecture, and the source packages from which the binary packages were generated.
+Note 17: non-free
+
+Due to restrictions in their licenses, source code may or may not be available for packages in the "contrib" and "non-free" areas.
+Note 18: contrib
+
+Due to restrictions in their licenses, source code may or may not be available for packages in the "contrib" and "non-free" areas.
+Note 19: doc
+
+The basic Debian documentation, such as this FAQ, the bug reporting system instructions, etc.
+Note 20: dists
+
+The dists directory is short for "distributions", and it is the canonical way to access the currently available Debian releases (and pre-releases).
+
+Inside, the 'stable', 'testing' and 'unstable' directories are symlinks to the corresponding codename.
+Note 21: binary-*
+
+Subdirectories that contain index files for binary packages of each available computer architecture, for example binary-i386 for packages which execute on Intel x86 PC machines or binary-sparc for packages which execute on Sun SPARCStations.
+
+The index files in binary-* are called Packages(.gz, .bz2) and they include a summary of each binary package that is included in that distribution. The actual binary packages reside in the top level pool directory.
+Note 22: debian-installer
+
+Contains a set of subdirectories (binary-architecture) meant for the installation system index files.
+Note 23: source
+
+Contains index files for source packages included in the distribution. The index file is called Sources(.gz, .bz2).
+Note 24: Backport
+
+Packages in testing and unstable adapted to work on stable.
+Note 25: Archive
+
+Archive is the repo where all previous stable distributions go when the new stable is released (also known as oldstables).
+Note 26: Debian policy manual
+
+https://www.debian.org/doc/debian-policy/
+Note 27: Licenses
+
+FS guidelines
+GPL, BSD, Artistic,...
+Note 28: Debian Free Software Guidelines
+
+https://www.debian.org/doc/debian-policy/ch-archive.html#s-dfsg
+Note 29: Distributions
+
+https://www.debian.org/doc/manuals/debian-faq/ch-ftparchives
+
+https://www.debian.org/releases/index.en.html
+Note 30: Oldstable
+
+Previous stable distributions.
+Note 31: Experimental
+
+Experimental is used for packages which are still being developed, and with a high risk of breaking your system. It's used by developers who'd like to study and test bleeding edge software. Users shouldn't be using packages from there, because they can be dangerous and harmful even for the most experienced people.
+Note 32: Unstable
+
+sid or unstable is the place where most of the packages are initially uploaded. It will never be released directly, because packages which are to be released will first have to be included in testing, in order to be released in stable later on. sid contains packages for both released and unreleased architectures.
+Note 33: contrib
+
+This directory contains packages which are DFSG-free andfreely distributable themselves, but somehow depend on a package that is notfreely distributable and thus available only in the non-free section.
+Note 34: main
+
+This directory contains the packages which formally constitute the most recent release of the Debian GNU/Linux system.
+
+These packages all comply with the Debian Free Software Guidelines, and are all freely usable and distributable.
+Note 35: non-free
+
+This directory contains packages distribution of which is restricted in a way that requires that distributors take careful account of the specified copyright requirements.
+Note 36: Testing
+
+Packages are installed into the `testing' directory after they have undergone some degree of testing in unstable.
+
+They must be in sync on all architectures where they have been built and mustn't have dependencies that make them uninstallable; they also need to have fewer release-critical bugs than the versions currently in unstable.
+
+More information about the status of "testing" in general and the individual packages is available at http://www.debian.org/devel/testing.
+
+
+Note 37: contrib
+
+This directory contains packages which are DFSG-free andfreely distributable themselves, but somehow depend on a package that is notfreely distributable and thus available only in the non-free section.
+Note 38: main
+
+This directory contains the packages which formally constitute the most recent release of the Debian GNU/Linux system.
+
+These packages all comply with the Debian Free Software Guidelines, and are all freely usable and distributable.
+Note 39: non-free
+
+This directory contains packages distribution of which is restricted in a way that requires that distributors take careful account of the specified copyright requirements.
+Note 40: Stable
+
+Current stable production release.
+Note 41: contrib
+
+This directory contains packages which are DFSG-free andfreely distributable themselves, but somehow depend on a package that is notfreely distributable and thus available only in the non-free section.
+Note 42: non-free
+
+This directory contains packages distribution of which is restricted in a way that requires that distributors take careful account of the specified copyright requirements.
+Note 43: main
+
+This directory contains the packages which formally constitute the most recent release of the Debian GNU/Linux system.
+
+These packages all comply with the Debian Free Software Guidelines, and are all freely usable and distributable.
+Note 44: Priorities
+
+Each Debian package is assigned a priority by the distribution maintainers, as an aid to the package management system.
+
+https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-priority
+Note 45: Required
+
+Packages that are necessary for the proper functioning of the system.
+
+This includes all tools that are necessary to repair system defects. Should not be removed, as this can leave a system broken.
+Note 46: Important
+
+Packages that should be found on any Unix-like system.
+
+Other packages which the system will not run well or be usable without will be here. There are no large applications here, they only constitute the bare infrastructure.
+
+
+Note 47: Standard
+
+Packages that are standard on any Linux system, including a reasonably small but not too limited character-mode system.
+
+This is what will be installed by default if users do not select anything else. Tools are included to be able to send e-mail, download files from FTP servers, a Python interpreter, some server software like OpenSSH and Exim and some common generic documentation.
+
+
+Note 48: Optional
+
+Packages that you might reasonably want to install if you do not know what they are, or that do not have specialized requirements.
+
+This includes plots of applications.
+
+
+Note 49: Extra
+
+Packages that either conflict with others with higher priorities, are only likely to be useful if you already know what they are, or have specialized requirements that make them unsuitable for "Optional".
+Note 50: Essential
+
+Packages that are absolutely necessary for the proper functioning of the system. The package management tools will refuse to remove these.
+Note 51: Status
+
+The package status seen with dpkg indicates what the user wants regarding the package.
+
+https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-pkgstatus
+Note 52: Remove
+
+The user wants the package removed, but does not want to remove any existing configuration file.
+Note 53: Hold
+
+The user wants this package not to be processed, i.e. wants to keep the current version with the current status whatever that is.
+Note 54: Purge
+
+The user wants the package to be removed completely, including its configuration files.
+Note 55: Install
+
+The user wants the package installed or upgraded.
+Note 56: Unknown
+
+The user has never indicated whether the package is wanted.
+Note 57: Dependencies
+
+Dependencies are designed to indicate (in a single flag) the level at which Program A can operate independently of the existence of Program B on a given system.
+
+This information us declared in the package's control file.
+
+https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-depends
+Note 58: Suggests
+
+Package A suggests Package B if B contains files that are related to (and usually enhance) the functionality of A.
+Note 59: Replaces
+
+Package A replaces Package B when files installed by B are removed and (in some cases) over-written by files in A.
+Note 60: Pre-depends
+
+For some packages, dpkg will refuse even to unpack them until certain dependencies are resolved. Such packages are said to "Pre-depend" on the presence of some other packages.
+Note 61: Provides
+
+Package A provides Package B when all of the files and functionality of B are incorporated into A. This mechanism provides a way for users with constrained disk space to get only that part of package A which they really need.
+Note 62: Breaks
+
+Package A breaks Package B when both packages cannot be simultaneously configured in a system. The package management system will refuse to install one if the other one is already installed and configured in the system.
+Note 63: Conflicts
+
+Package A conflicts with Package B when A will not operate if B is installed on the system. Most often, conflicts are cases where A contains files which are an improvement over those in B. "Conflicts" are often combined with "replaces".
+Note 64: Recommends
+
+Package A recommends Package B, if the package maintainer judges that most users would not want A without also having the functionality provided by B.
+Note 65: Depends
+
+Package A depends on Package B if B absolutely must be installed in order to run A. In some cases, A depends not only on B, but on a version of B. In this case, the version dependency is usually a lower limit, in the sense that A depends on any version of B more recent than some specified version.
+Note 66: Pre/post scripts
+
+https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-maintscripts
+Note 67: postinst
+
+This script typically completes any required configuration of the package foo once foo has been unpacked from its Debian archive (".deb") file. Often, 'postinst' scripts ask users for input, and/or warn them that if they accept default values, they should remember to go back and re-configure that package as needed. Many 'postinst' scripts then execute any commands necessary to start or restart a service once a new package has been installed or upgraded.
+Note 68: postrm
+
+This script typically modifies links or other files associated with foo, and/or removes files created by the package. 
+Note 69: prerm
+
+This script typically stops any daemons which are associated with a package. It is executed before the removal of files associated with the package.
+Note 70: preinst
+
+This script is executed before the package it belongs to is unpacked from its Debian archive (".deb") file. Many 'preinst' scripts stop services for packages which are being upgraded until their installation or upgrade is completed (following the successful execution of the 'postinst' script).
+Note 71: data.tar.gz
+
+data files of the package
+Note 72: control.tar.gz
+
+metadata about the package
+control, md5sums, (pre|post)(rm|inst), triggers, shlibs, . . .
+Note 73: debian-binary
+
+version of the deb file format, "2.0\n"
+Note 74: Types
+
+There are two types of packages: binary and source.
+
+https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-package
+Note 75: Source
+
+Source packages contain the source code and consist of a .dsc file describing the source package (including the names of the following files), a.orig.tar.gz file that contains the original unmodified source in gzip-compressed tar format and usually a .diff.gz file that contains the Debian-specific changes to the original source. The utility dpkg-source packs and unpacks Debian source archives.
+
+https://www.debian.org/doc/debian-policy/ch-source.html
+Note 76: Build
+
+https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-sourcebuild
+Note 77: Installation
+
+To unpack a source package it is first necessary to configure the "deb-src" lines in apt's sources.list config file.
+
+Afterwards it's just:
+
+apt-get source foo
+Note 78: Virtual
+
+A virtual package is a generic name that applies to any one of a group of packages, all of which provide similar basic functionality.
+
+Formatge example, exim4 and sendmail both provide the functionality of a mail transport agent. They are therefore said to provide the virtual package "mail-transport-agent". If either one is installed, then any program depending on the installation of a mail-transport-agent will be satisfied by the presence of this virtual package.
+
+If more than one package which provide the same virtual package is installed on a system, then system administrators can set one as the preferred package with the update-alternatives command.
+
+https://www.debian.org/doc/manuals/debian-faq/ch-customizing.en.html#s-diverse
+
+https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics.en.html#s-virtual
+Note 79: Binary
+
+Binary packages contain executables, configuration files, man/info pages, copyright information, and other documentation. These packages are distributed in a Debian-specific archive format and they are usually characterized by having a '.deb' file extension. Binary packages can be unpacked using the Debian utility dpkg
+
+https://www.debian.org/doc/debian-policy/ch-binary.html
